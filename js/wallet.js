@@ -33,7 +33,7 @@ window.onload = function (){
     if (apiget == "mainnet" || apiget == null) {
         api = "http://api.widecoin.org"
         prefix = "WC"
-        inputPlaceholder.attr("placeholder", "sugar1q...")
+        inputPlaceholder.attr("placeholder", "wc1q...")
         href = "https://explorer.widecoin.org/address/" + getaddress
         $("#history").attr("href", href)
     }

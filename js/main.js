@@ -95,10 +95,10 @@ $("#generateAddress").click(function() {
 
     // Sets History Tab to open to explorer
     if (apiget == "mainnet" || apiget == null) {
-        href = "https://sugarchain.org/explorer/#/address/" + getaddress
+        href = "https://explorer.widecoin.org/address/" + getaddress
     }
     else if (apiget == "testnet") {
-        href = "https://sugar.wtf/#/address/" + getaddress
+        href = "https://test-explorer.widecoin.org/address/" + getaddress
     }
     $("#history").attr("href", href)
 })
