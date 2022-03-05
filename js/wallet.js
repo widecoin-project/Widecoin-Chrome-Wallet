@@ -8,7 +8,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
 
 
 // Define variable to set QR Code
-var sugarqrcode = new QRCode(document.getElementById("sugarqr"), {
+var wcnqrcode = new QRCode(document.getElementById("wcnqr"), {
     width: 100,
     height: 100,
     position: "center"
@@ -31,17 +31,17 @@ window.onload = function (){
 
     // Set history page to open to explorer, sets placeholder to testnet or mainnet prefix & sets ticker according to mainnet or testnet
     if (apiget == "mainnet" || apiget == null) {
-        api = "https://api.sugarchain.org"
-        prefix = "SUGAR"
-        inputPlaceholder.attr("placeholder", "sugar1q...")
-        href = "https://sugarchain.org/explorer/#/address/" + getaddress
+        api = "https://api.widecoin.org"
+        prefix = "WC"
+        inputPlaceholder.attr("placeholder", "wc1q...")
+        href = "https://explorer.widecoin.org/address/" + getaddress
         $("#history").attr("href", href)
     }
     else if (apiget == "testnet"){
-        api = "https://api-testnet.sugarchain.org"
-        prefix = "TUGAR"
-        inputPlaceholder.attr("placeholder", "tugar1q...")
-        href = "https://sugar.wtf/#/address/" + getaddress
+        api = "https://api-testnet.widecoin.org"
+        prefix = "TWC"
+        inputPlaceholder.attr("placeholder", "wc1q...")
+        href = "https://test-explorer.widecoin.org/address/" + getaddress
         $("#history").attr("href", href)
     }
 
@@ -91,7 +91,7 @@ window.onload = function (){
                 qrcodegen()
             }
             else {
-                $("#currentBalance").text("Enter a valid Sugarchain address")
+                $("#currentBalance").text("Enter a valid Widecoin address")
                 $("#currentRecieved").text("")
                 $("#currentSpent").text("")
             }
@@ -109,10 +109,10 @@ window.onload = function (){
 // Generate QR code
 function qrcodegen() {
     if (!document.getElementById("addressInput").value) {
-        sugarqrcode.makeCode("Enter an address")
+        wcnqrcode.makeCode("Enter an address")
     }
     else {
-        sugarqrcode.makeCode(document.getElementById("addressInput").value)
+        wcnqrcode.makeCode(document.getElementById("addressInput").value)
     }
 }
 

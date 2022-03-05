@@ -10,15 +10,15 @@ window.onload = function (){
 
     // Set history page to open to explorer according to mainnet or testnet & set ticker according to mainnet or testnet
     if (apiget == "mainnet" || apiget == null) {
-        api = "https://api.sugarchain.org"
-        prefix = "SUGAR"
-        href = "https://sugarchain.org/explorer/#/address/" + getaddress
+        api = "https://api.widecoin.org"
+        prefix = "WCN"
+        href = "https://explorer.widecoin.org/address/" + getaddress
         $("#history").attr("href", href)
     }
     else if (apiget == "testnet"){
-        api = "https://api-testnet.sugarchain.org"
-        prefix = "TUGAR"
-        href = "https://sugar.wtf/#/" + getaddress
+        api = "https://api-testnet.widecoin.org"
+        prefix = "TW"
+        href = "https://explorer.widecoin.org/address/" + getaddress
         $("#history").attr("href", href)
     }
 
@@ -55,9 +55,9 @@ window.onload = function (){
     }
 
     function getPrice() {
-        apiCall("/price").then(function(data) {
-            var usd = data.result.usd
-            var btc = Number(data.result.btc).toLocaleString(undefined, {minimumFractionDigits: 8, maximumFractionDigits: 8})
+        apiCall("/getprice").then(function(data) {
+            var usd = data.result.price_usd
+            var btc = Number(data.result.price_btc).toLocaleString(undefined, {minimumFractionDigits: 8, maximumFractionDigits: 8})
             $("#priceBTC").text(btc)
             $("#priceUSD").text(usd)
         })
