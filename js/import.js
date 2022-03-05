@@ -23,7 +23,7 @@ window.onload = function() {
 
 function getImportAPI() {
     // Set Network config according to Endpoint selection
-    if (localStorage.getItem("api") == "http://api.widecoin.org" || localStorage.getItem("api") == null){
+    if (localStorage.getItem("api") == "https://api.widecoin.org" || localStorage.getItem("api") == null){
         netconfig = {					
            'network': {
                 'messagePrefix': '\x19Widecoin Signed Message:\n',

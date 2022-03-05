@@ -37,7 +37,7 @@ selectedEndpoint.onchange = function () {
     document.location.reload()
 }
 
-var mainnet = "http://api.widecoin.org"
+var mainnet = "https://api.widecoin.org"
 var testnet = "https://api-testnet.widecoin.org"
 // Set the api in local storage
 function setAPI() {

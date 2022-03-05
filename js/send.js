@@ -21,7 +21,7 @@ window.onload = function() {
 
     // Set history page to open to explorer & sets placeholder to testnet or mainnet prefix
     if (apiget == "mainnet" || apiget == null) {
-        api = "http://api.widecoin.org"
+        api = "https://api.widecoin.org"
         inputPlaceholder.attr("placeholder", "wc1q...")
         href = "https://explorer.widecoin.org/address/" + address
     }

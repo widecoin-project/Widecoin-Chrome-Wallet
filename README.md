@@ -1,5 +1,5 @@
 # Widecoin-Chrome-Wallet
-Light Widecoin Web wallet in the form of a chrome extension which utilises bitcoin.js and a simple REST API http://api.widecoin.org/
+Light Widecoin Web wallet in the form of a chrome extension which utilises bitcoin.js and a simple REST API https://api.widecoin.org/
 
 
 ### Installation
